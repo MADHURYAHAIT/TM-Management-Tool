@@ -1,10 +1,11 @@
 import { ScriptConfig } from '../types';
 
 export const scriptConfigs: ScriptConfig[] = [
-  {
+
+    {
     id: 'update-salesforce-quote',
-    name: 'Update Salesforce Quote',
-    description: 'Update quote data in Salesforce with new information from CSV file',
+    name: 'Update Single Salesforce Quote',
+    description: 'Update single quote data in Salesforce',
     category: 'Salesforce',
     icon: 'Database',
     apiEndpoint: '/api/salesforce/update-quote',
@@ -25,6 +26,20 @@ export const scriptConfigs: ScriptConfig[] = [
         label: 'Quote ID',
         type: 'text',
         placeholder: 'Enter Quote ID',
+        required: true,
+      },
+       {
+        id: 'fieldName',
+        label: 'Field Name',
+        type: 'text',
+        placeholder: 'Enter your Correct field name eg. txn.custom.purchaseOrderNumber',
+        required: true,
+      },
+       {
+        id: 'value',
+        label: 'Value',
+        type: 'text',
+        placeholder: 'Enter the field value',
         required: true,
       },
       {
@@ -35,22 +50,14 @@ export const scriptConfigs: ScriptConfig[] = [
         required: false,
       },
     ],
-    fileUploads: [
-      {
-        id: 'csvFile',
-        label: 'Quote Data CSV',
-        acceptedTypes: '.csv',
-        required: true,
-      },
-    ],
   },
   
 
 
     {
     id: 'update-salesforce-quote',
-    name: 'Update Salesforce Quote',
-    description: 'Update quote data in Salesforce with new information from CSV file',
+    name: 'Update Salesforce Bulk Quote',
+    description: 'Update quote data in Salesforce with the information from CSV file',
     category: 'Salesforce',
     icon: 'Database',
     apiEndpoint: '/api/salesforce/update-quote',
@@ -65,13 +72,6 @@ export const scriptConfigs: ScriptConfig[] = [
           { label: 'Sandbox', value: 'sandbox' },
           { label: 'Dev', value: 'dev' },
         ],
-      },
-      {
-        id: 'quoteId',
-        label: 'Quote ID',
-        type: 'text',
-        placeholder: 'Enter Quote ID',
-        required: true,
       },
       {
         id: 'notes',
@@ -112,32 +112,16 @@ export const scriptConfigs: ScriptConfig[] = [
       },
       {
         id: 'blueprintName',
-        label: 'Blueprint Name',
+        label: 'Exclusion Blueprint Name',
         type: 'text',
-        placeholder: 'Enter blueprint name',
-        required: true,
-      },
-      {
-        id: 'version',
-        label: 'Version',
-        type: 'text',
-        placeholder: 'e.g., 1.0.0',
-        required: true,
-      },
-    ],
-    fileUploads: [
-      {
-        id: 'blueprintZip',
-        label: 'Blueprint Package (ZIP)',
-        acceptedTypes: '.zip',
-        required: true,
+        placeholder: 'Enter blueprint name which needs to be excluded, leave it blank if all needs to be deployed',
       },
     ],
   },
   {
     id: 'sync-data',
     name: 'Sync Data',
-    description: 'Synchronize data between instances using CSV import',
+    description: 'The TM Migration Tool',
     category: 'Data Management',
     icon: 'RefreshCw',
     apiEndpoint: '/api/data/sync',
@@ -163,22 +147,8 @@ export const scriptConfigs: ScriptConfig[] = [
           { label: 'Staging', value: 'staging' },
           { label: 'Development', value: 'development' },
         ],
-      },
-      {
-        id: 'entityType',
-        label: 'Entity Type',
-        type: 'text',
-        placeholder: 'e.g., quotes, accounts',
-        required: true,
-      },
+      }
     ],
-    fileUploads: [
-      {
-        id: 'dataFile',
-        label: 'Data File (CSV)',
-        acceptedTypes: '.csv',
-        required: true,
-      },
-    ],
+   
   },
 ];
