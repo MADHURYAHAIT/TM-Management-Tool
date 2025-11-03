@@ -50,7 +50,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         </div>
 
         {/* Categories */}
-        <div>
+        {/* <div>
           <h3 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3 px-3">
             Categories
           </h3>
@@ -76,7 +76,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </nav>
     </aside>
   );

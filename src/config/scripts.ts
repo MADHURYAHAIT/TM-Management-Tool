@@ -55,7 +55,7 @@ export const scriptConfigs: ScriptConfig[] = [
 
 
     {
-    id: 'update-salesforce-quote',
+    id: 'update-salesforce-bulk-quote',
     name: 'Update Salesforce Bulk Quote',
     description: 'Update quote data in Salesforce with the information from CSV file',
     category: 'Salesforce',
