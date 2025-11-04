@@ -53,7 +53,7 @@ export default function FormField({ config, value, onChange, error }: FormFieldP
       ) : config.type === 'multiselect' ? (
         (() => {
           const allOptions = config.options || [];
-          const selectableOptions = allOptions.filter((opt) => opt.value != 'all');  // Exclude 'all' from selectable list
+          const selectableOptions = allOptions.filter((opt) => opt.value != 'All');  // Exclude 'all' from selectable list
           const allValues = selectableOptions.map((opt) => opt.value);  // All actual field values
           const selectedValues = Array.isArray(value) ? value : [];
 
