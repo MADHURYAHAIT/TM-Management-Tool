@@ -155,7 +155,7 @@ export default function ScriptExecutor({ script, onClose, onExecute }: ScriptExe
             ) : (
               <>
                 <Play className="w-5 h-5" />
-                <span>Execute Script</span>
+                <span>Run Script</span>
               </>
             )}
           </button>

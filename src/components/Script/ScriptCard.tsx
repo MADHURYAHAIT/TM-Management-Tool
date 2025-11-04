@@ -36,12 +36,15 @@ export default function ScriptCard({ script, onSelect }: ScriptCardProps) {
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
             {script.description}
           </p>
-          <div className="flex items-center justify-between">
+          <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
+            Fields: {script.fields.map(f => f.label).join(', ')}
+          </p>
+              <div className="flex items-center justify-between">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
               {script.category}
             </span>
             <span className="text-sm text-blue-600 dark:text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-              Execute →
+              {script.action} →
             </span>
           </div>
         </div>
