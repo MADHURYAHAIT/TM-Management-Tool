@@ -263,11 +263,13 @@ export const scriptConfigs: ScriptConfig[] = [
         { label: "Discount 2 Amt", value: 'disc2amt' },
           { label: "Surcharge", value: 'surcharge' },
         { label: "Surcharge Amt", value: 'surchargeamt' },
+           { label: "Inherited Product Line", value: 'ipl' },
           { label: "HTS", value: 'hts' },
         { label: "ECCN", value: 'eccn' },
            { label: "IN HSN", value: 'hsn' },
         { label: "IN SAC", value: 'sac' },
             { label: "Dominant COO", value: 'dominantcoo' },
+
         // Add more as needed
       ],
     },
